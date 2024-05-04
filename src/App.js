@@ -1,25 +1,44 @@
-import logo from './logo.svg';
-import './App.css';
+// import React, { useEffect } from 'react';
+// import { useDispatch, useSelector } from 'react-redux';
+// import JobCard from './components/JobCard';
+// import { fetchJobs } from './reducers/jobSlice';
+// // import './styles/JobCard.styles.js'; // Optional, import your custom styles
+
+// function App() {
+//   const dispatch = useDispatch();
+//   const jobs = useSelector(state => state.jobs.jobs);
+//   const loading = useSelector(state => state.jobs.loading);
+//   const error = useSelector(state => state.jobs.error);
+
+//   useEffect(() => {
+//     dispatch(fetchJobs());
+//   }, [dispatch]);
+
+//   return (
+//     <div className="App">
+//       <h1>Jobs</h1>
+//       {loading && <p>Loading jobs...</p>}
+//       {error && <p>Error: {error}</p>}
+//       {jobs.map(job => (
+//         <JobCard key={job.jdUid} jobData={job} />
+//       ))}
+//     </div>
+//   );
+// }
+
+// export default App;
+
+import React from 'react';
+import { Container } from '@mui/material';
+import HomePage from './pages/HomePage';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container>
+      <HomePage />
+    </Container>
   );
 }
 
 export default App;
+
