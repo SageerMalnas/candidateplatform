@@ -8,12 +8,14 @@ import {
   Grid,
   IconButton,
 } from '@mui/material';
-import { Search as SearchIcon,} from '@mui/icons-material';
+import { Search as SearchIcon, } from '@mui/icons-material';
 
 const Filter = ({ onFilterChange }) => {
   const [searchTerm, setSearchTerm] = useState('');
   const [experience, setExperience] = useState('');
   const [location, setLocation] = useState('');
+  const [minSalary, setMinSalary] = useState('');
+  const [role, setRole] = useState('');
 
   const handleExperienceChange = (event) => {
     setExperience(event.target.value);
@@ -23,6 +25,18 @@ const Filter = ({ onFilterChange }) => {
   const handleLocationChange = (event) => {
     setLocation(event.target.value);
     onFilterChange('location', event.target.value);
+  };
+
+  const handleMinSalaryChange = (event) => {
+    setMinSalary(event.target.value);
+    onFilterChange('minSalary', event.target.value);
+  };
+
+ 
+
+  const handleRoleChange = (event) => {
+    setRole(event.target.value);
+    onFilterChange('role', event.target.value);
   };
 
   const handleSearchChange = (event) => {
@@ -83,6 +97,25 @@ const Filter = ({ onFilterChange }) => {
             <MenuItem value="inoffice">In Office</MenuItem>
           </Select>
         </FormControl>
+      </Grid>
+      <Grid item xs={12} sm={6} md={3}>
+        <TextField
+          fullWidth
+          label="Minimum Salary"
+          variant="outlined"
+          value={minSalary}
+          onChange={handleMinSalaryChange}
+        />
+        
+      </Grid>
+      <Grid item xs={12} sm={6} md={3}>
+        <TextField
+          fullWidth
+          label="Role"
+          variant="outlined"
+          value={role}
+          onChange={handleRoleChange}
+        />
       </Grid>
     </Grid>
   );
