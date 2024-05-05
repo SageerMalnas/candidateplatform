@@ -52,6 +52,11 @@ const JobList = () => {
   
 
   const handleFilterChange = (name, value) => {
+    // Replace null values with 0
+    if (value === null) {
+      value = 0;
+    }
+  
     setFilters({
       ...filters,
       [name]: value,
@@ -61,6 +66,7 @@ const JobList = () => {
   return (
     <div>
       <Filter onFilterChange={handleFilterChange} />
+      <br/>
       <Grid container spacing={2}>
         {filteredJobs.map(job => (
           <Grid item key={job.jdUid} xs={12} sm={6} md={4}>

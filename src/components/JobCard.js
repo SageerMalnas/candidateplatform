@@ -22,7 +22,6 @@ const useStyles = makeStyles({
     justifyContent: 'left'
   },
   jobDetails: {
-    // flex: 1,
     display: 'flex',
     flexDirection: 'column',
   },
@@ -51,11 +50,11 @@ const useStyles = makeStyles({
     padding: '2px',
     marginLeft:'-5px',
     width: '55%',
-    fontSize: '0.4rem', // Decrease font size
-    fontFamily: 'Varela Round'
+    fontSize: '0.4rem', 
+    // fontFamily: 'Varela Round'
   },
   content: {
-    fontFamily: 'Varela Round' // Change font family
+    fontFamily: 'Varela Round' 
   },
   ViewMoreButton: {
     marginTop: '1rem',
@@ -94,7 +93,7 @@ const JobCard = ({ job }) => {
           </div>
         </div>
         <Typography color="textSecondary" gutterBottom>
-          Estimated Salary: {job.minJdSalary} - {job.maxJdSalary} {job.salaryCurrencyCode}
+          Estimated Salary: {job.minJdSalary} - {job.maxJdSalary} {job.salaryCurrencyCode} ✅
         </Typography>
         <Typography>
           About Company:
