@@ -7,6 +7,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 #First step is to clone the repo using git clone <address>
 #Then install required dependencies , using npm install or yarn install
+#Everything that has been mentioned in the task list is implemented,
+#Filter list along with the card details
+
+
 In the project directory, you can run:
 
 ### `npm start`
